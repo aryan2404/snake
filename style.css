@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background 0.5s, color 0.5s, all 0.1s;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+nav > div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100vh;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 20px 0px;
+  overflow: hidden;
+  width: 0px;
+  transition: width 0.2s;
+  z-index: 999999;
+}
+
+.menuopen {
+  width: 400px;
+}
+
+.menuicon {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+}
+#darkmode {
+  width: 100%;
+}
+#darkmode span {
+  color: #fff;
+  font-family: "Amatic SC", cursive;
+  font-size: 50px;
+}
+#darkmode input {
+  width: 75px;
+  height: 50px;
+  text-align: center;
+  font-size: 50px;
+  font-family: "Amatic SC", cursive;
+  display: grid;
+  place-items: center;
+}
+#darkmode > div {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu > div {
+  min-height: 140px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+.menu_icon {
+  padding: 10px 2rem;
+  width: fit-content;
+  padding-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999;
+  cursor: pointer;
+}
+
+.menu_icon > div {
+  width: 40px;
+  background-color: white;
+  border-radius: 4px;
+  height: 5px;
+  transition: all 0.2s;
+}
+.menu_icon > div::after,
+.menu_icon > div::before {
+  content: " ";
+  width: 40px;
+  background-color: white;
+  border-radius: 4px;
+  height: 5px;
+  position: absolute;
+  transition: all 0.3s;
+}
+.menu_icon > div::after {
+  transform: translateY(+10px);
+}
+.menu_icon > div::before {
+  transform: translateY(-10px);
+}
+.open > div {
+  background: transparent;
+}
+.open > div::after {
+  transform: translateY(0px) rotate(45deg);
+}
+.open > div::before {
+  transform: translateY(0px) rotate(-45deg);
+}
+
+#board {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(151, 15, 224);
+  border: 10px solid black;
+}
+
+#game {
+  height: 90%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 15px);
+  grid-template-rows: repeat(auto-fill, 15px);
+}
+.head {
+  background-color: purple;
+  border: 1px solid black;
+  border-radius: 25%;
+  transform: rotate(45deg);
+}
+.body {
+  border: 1px solid black;
+  background-color: yellow;
+  border-radius: 25%;
+  margin: 1px;
+}
+.tail {
+  border: 1px solid black;
+  background-color: yellow;
+  border-radius: 25%;
+  margin: 1px;
+}
+.food {
+  background-color: red;
+  margin: 1px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.speed {
+  position: absolute;
+  top: 0;
+  left: 115px;
+  border: none;
+  border-top: 10px solid black;
+  background-color: greenyellow;
+  width: 60px;
+  height: 70px;
+  text-align: center;
+  font-size: 35px;
+  font-family: "Amatic SC", cursive;
+  display: grid;
+  place-items: center;
+}
+#speedcontroller {
+  position: absolute;
+  top: 0;
+  left: 174px;
+  border: none;
+  border-top: 10px solid black;
+  background-color: greenyellow;
+  width: 40px;
+  height: 70px;
+  text-align: center;
+  font-size: 35px;
+  font-family: "Amatic SC", cursive;
+  display: grid;
+  place-items: center;
+}
+#score {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 10px solid black;
+  border-left: 10px solid black;
+  background-color: greenyellow;
+  width: 115px;
+  height: 70px;
+  text-align: center;
+  font-size: 35px;
+  font-family: "Amatic SC", cursive;
+  display: grid;
+  place-items: center;
+}
+#btns {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+input:focus {
+  outline: none;
+  border: none;
+}
+@media only screen and (max-width: 550px) {
+  #board {
+    height: 90%;
+  }
+}

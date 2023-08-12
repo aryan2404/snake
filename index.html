@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Snake Game</title>
+   <link rel="shortcut icon"
+      href="https://1.bp.blogspot.com/-4NH_X9UGtWI/YJh9RPIzRDI/AAAAAAAAOto/urkftk72C3M6fVzuBOP2TU3bcXnbkyjCgCLcBGAsYHQ/s320/logo.png"
+      type="image/x-icon">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <nav>
+      <div>
+         <div class="menu_icon" onclick="showmenu()">
+            <div></div>
+         </div>
+         <div class="menu">
+            <div>
+               <div id="darkmode">
+                  <div>
+                     <span>Min speed:</span>
+                     <input class="menuicon" type="number" id="minsp"></input>
+                  </div>
+                  <div>
+                     <span>Max speed:</span>
+                     <input class="menuicon" type="number" id="maxsp"></input>
+                  </div>
+               </div>
+            </div>
+         </div>
+   </nav>
+
+
+   <div id="board">
+      <div id="score">Score: 0</div>
+      <div class="speed">Speed:</div>
+      <input type="number" id="speedcontroller">
+      </input>
+      <section id="game">
+      </section>
+      <div id="btns">
+         <span class="btn material-icons" id="l" onclick="directioncontrol(this.id)">arrow_back</span>
+         <span class="btn material-icons" id="u" onclick="directioncontrol(this.id)">arrow_upward</span>
+         <span class="btn material-icons" id="d" onclick="directioncontrol(this.id)">arrow_downward</span>
+         <span class="btn material-icons" id="r" onclick="directioncontrol(this.id)">arrow_forward</span>
+      </div>
+   </div>
+</body>
+<script src="main.js"></script>
+
+</html>
